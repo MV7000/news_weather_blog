@@ -1,0 +1,88 @@
+.modalReadContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -5vh;
+  left: 0;
+  backdrop-filter: blur(30px);
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+.modalReadWrapper {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3vh;
+  backdrop-filter: blur(10px);
+  border: 2px solid darkcyan;
+  box-shadow: 7px 7px 5px rgb(0, 41, 41);
+  filter: drop-shadow(-3px 3px 5px rgb(0, 39, 39));
+}
+.btnReadModalCloseWrapper {
+  margin: 5vh auto 0;
+}
+.imageModalReadWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.imageModalReadWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalReadTitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgb(255, 0, 119);
+  filter: drop-shadow(5px 5px 3px rgb(0, 43, 43))
+    drop-shadow(5px 15px 10px rgb(230, 255, 1))
+    drop-shadow(5px -15px 10px rgb(1, 183, 255)) contrast(250%);
+}
+.modalReadTitleWrapper h1 {
+  font-family: Merriweather;
+  font-size: calc(var(--index) * 2.5);
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modalReadTextWrapper {
+  width: 50vw;
+  height: auto;
+  min-height: 50vh;
+  border: 1px solid rgb(4, 180, 180);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(8px);
+  font-family: Merriweather;
+  font-size: calc(var(--index) * 0.85);
+  font-weight: 700;
+  text-align: center;
+  color: rgb(251, 255, 0);
+  box-shadow: 7px 7px 7px rgb(0, 12, 12);
+  text-shadow: 3px 3px 2px rgb(0, 48, 48);
+  filter: drop-shadow(-3px 3px 10px rgb(0, 77, 77));
+}
+
+@media screen and (max-width: 500px) {
+  .modalReadTextWrapper {
+    width: 70vw;
+  }
+}

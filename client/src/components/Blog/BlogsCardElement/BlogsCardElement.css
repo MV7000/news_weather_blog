@@ -1,0 +1,68 @@
+.ant-card {
+  width: calc(var(--index) * 13);
+  height: calc(var(--index) * 17.2);
+  background: rgb(3, 120, 124);
+  box-shadow: 5px 5px 5px darkcyan, inset 5px 5px 5px rgb(0, 45, 63);
+}
+
+.ant-card-meta {
+  min-height: calc(var(--index) * 6) !important;
+}
+.ant-card-meta-title {
+  font-size: calc(var(--index)) !important;
+}
+.ant-card-meta-description {
+  font-size: calc(var(--index) * 0.6) !important;
+  color: rgb(3, 255, 255) !important;
+}
+.ant-card-meta-description {
+  min-width: 100%;
+  min-height: calc(var(--index) * 3.5);
+  max-height: calc(var(--index) * 4);
+  font-size: calc(var(--index) * 0.8);
+  padding: 0.5vh 1vw;
+  border: 1px solid darkcyan;
+  border-radius: 12px;
+  box-shadow: inset 3px 3px 3px rgb(0, 72, 100);
+}
+.ant-card-cover img {
+  height: calc(var(--index) * 6.3);
+}
+.divider {
+  box-shadow: 3px 3px 1px rgb(0, 48, 48);
+}
+.btnCardElementWrapper {
+  width: calc(var(--index) * 10);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.8vw;
+  margin: 2vh auto;
+}
+
+.btnCardElementWrapper button {
+  width: calc(var(--index) * 3.5);
+  box-shadow: 3px 5px 3px rgb(0, 32, 32);
+  font-size: calc(var(--index) * 0.55);
+  padding: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ant-card {
+    height: calc(var(--index) * 19);
+  }
+}
+@media screen and (max-width: 900px) {
+  .btnCardElementWrapper button {
+    padding: 1vw !important;
+    font-size: calc(var(--index) * 0.5);
+  }
+}
+@media screen and (max-width: 700px) {
+  .ant-card-body {
+    padding: 5px !important;
+  }
+  .btnCardElementWrapper {
+    margin: 3vh auto 0;
+  }
+}

@@ -1,0 +1,122 @@
+.newBlogContainer {
+  min-height: 100vh;
+}
+.newBlogContainer h1 {
+  margin: 10vh auto 0;
+  font-size: calc(var(--index) * 2);
+}
+.newBlogContainer label {
+  color: rgb(1, 255, 255);
+  margin: 0 1vw;
+}
+#loadImg {
+  width: calc(var(--index) * 10);
+  font-size: calc(var(--index) * 0.7);
+  font-weight: 700;
+  color: orangered;
+  border-radius: 7px;
+  cursor: pointer;
+}
+input[type='file']::file-selector-button,
+.imageChoice {
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: darkcyan;
+  cursor: pointer;
+}
+
+input[type='file']::file-selector-button:hover {
+  background-color: greenyellow;
+  color: orangered;
+}
+.imageChoice:hover {
+  background-color: greenyellow;
+  color: orangered;
+}
+.imageChoice {
+  background-color: orangered;
+  color: greenyellow;
+}
+.newBlogWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 5vw;
+}
+.btnExitWrapper {
+  height: 10vh;
+  display: flex;
+  align-items: start;
+  justify-content: right;
+  margin: -5vh 5vw 0 0;
+}
+.exitBtn {
+  width: calc(var(--index) * 2);
+  height: calc(var(--index) * 2);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgb(0, 247, 255);
+  transition: 0.3s;
+}
+.exitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 2px rgb(255, 0, 0);
+}
+.exitBtn:active {
+  transform: translateY(-1px);
+  box-shadow: 1px 1px 1px rgb(255, 52, 1);
+}
+#formBlog {
+  width: 98%;
+  margin: 0 auto 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#titleBlog {
+  width: 65%;
+  height: 5vh;
+  text-align: center;
+  margin: 2vh 0;
+  font-size: 0.9em;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgb(2, 206, 206);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px rgb(2, 206, 206);
+}
+#textBlog {
+  max-width: 95%;
+  border: none;
+  border-radius: 12px;
+  padding: calc(var(--index));
+  font-size: calc(var(--index) * 0.8);
+  font-weight: 900;
+  font-style: italic;
+  color: rgb(0, 24, 24);
+  text-shadow: 1px 1px 1px rgb(73, 255, 1);
+  box-shadow: 3px 3px 3px rgb(2, 206, 206);
+}
+#textBlog::placeholder {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  color: darkcyan;
+  text-shadow: 1px 1px 1px rgb(0, 24, 24);
+}
+.btnNewBlogWrapper {
+  margin: 3vh;
+}
+
+.blogImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 5vh;
+  margin: 1vh auto 0;
+}

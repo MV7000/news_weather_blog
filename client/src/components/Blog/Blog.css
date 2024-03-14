@@ -1,0 +1,123 @@
+.blogsContainer {
+  min-height: 80vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blogCardsContainer {
+  height: auto;
+  margin: 5vh auto 0;
+}
+.blogCardsWrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5vw;
+  padding: 0 1vw;
+}
+.cardElementWrapper {
+  height: auto;
+  padding-left: 0;
+}
+.btnBlogAddWrapper {
+  width: 100vw;
+  height: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.btnBlogAddWrapper button {
+  filter: drop-shadow(5px 5px 4px rgb(0, 43, 43)) contrast(250%);
+}
+
+.blogArea {
+  margin: 3vh;
+  width: 45vw;
+}
+
+.blogWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emptyString {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emptyString h2 {
+  text-shadow: 3px 3px 3px darkcyan;
+  color: rgb(1, 63, 99);
+  filter: drop-shadow(5px 5px 4px rgb(0, 43, 43))
+    drop-shadow(5px 15px 5px rgb(230, 255, 1))
+    drop-shadow(5px -15px 5px rgb(1, 183, 255)) contrast(250%);
+}
+.ant-card-meta-description {
+  padding: calc(var(--index) * 0.2) !important;
+}
+.ant-pagination {
+  margin: 5vh auto 0;
+}
+
+.ant-pagination a,
+.ant-pagination svg {
+  color: white !important;
+  font-weight: 900;
+  font-size: calc(var(--index));
+  text-shadow: 3px 3px 3px rgb(0, 19, 19);
+}
+.ant-pagination-item-active a,
+.ant-pagination-item-active svg {
+  background-color: #1677ff;
+}
+.spinerText {
+  color: rgb(0, 252, 252);
+  font-size: calc(var(--index));
+  font-weight: 700;
+  font-style: italic;
+  filter: drop-shadow(-3px -3px 3px rgb(0, 252, 126))
+    drop-shadow(3px 3px 3px rgb(0, 235, 252));
+}
+.spinerVisible {
+  display: none;
+}
+
+@media screen and (max-width: 1420px) {
+  .btnBlogAddWrapper {
+    height: 10vh;
+  }
+  .ant-pagination {
+    margin: 5vh auto 3vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blogCardsWrapper {
+    gap: 5vh;
+    padding: 0;
+  }
+  .ant-divider {
+    margin: 10px 0;
+  }
+  .btnCardElementWrapper {
+    margin: 1vh 0;
+  }
+  .btnCardElementWrapper button {
+    width: 9vw !important;
+    height: 4vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btnCardElementWrapper button {
+    width: 12vw !important;
+    height: 3vh;
+  }
+}

@@ -1,0 +1,225 @@
+.contactWrapper {
+  margin: 0vh auto;
+  padding: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  overflow: hidden;
+}
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 45vw;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-conic-gradient(
+    from var(--a),
+    rgb(0, 252, 252) 0%,
+    rgb(1, 115, 150) 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px gray;
+  animation: animate 6s linear infinite;
+}
+.mapWrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    rgb(0, 252, 252) 0%,
+    rgb(1, 90, 117) 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  border-radius: 12px;
+  animation: animate 6s linear infinite;
+  animation-delay: 1.5s;
+}
+.recvisiteWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 65vh;
+  min-width: 35vw;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  box-shadow: inset 5px 5px 15px rgb(2, 255, 255), 5px 5px 5px gray;
+  background: rgb(1, 57, 59);
+  color: aliceblue;
+}
+.recvisiteWrapper h1 {
+  font-size: calc(var(--index) * 1.2);
+}
+.recvisiteWrapper h2 {
+  font-size: calc(var(--index));
+  color: orangered;
+}
+.recvisiteWrapper ul {
+  text-align: center;
+  list-style: none;
+}
+.recvisiteWrapper ul span {
+  visibility: hidden;
+  cursor: pointer;
+}
+.recvisiteWrapper ul li:hover {
+  color: rgb(255, 72, 0);
+  font-weight: 900;
+}
+.recvisiteWrapper ul li:hover span {
+  visibility: visible;
+  font-weight: 900;
+  color: rgb(129, 189, 238);
+}
+.btnHomeBackWrapper {
+  margin: 1vh auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backHome {
+  width: calc(var(--index) * 9);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.backHome:hover {
+  color: rgb(0, 72, 121);
+}
+.btnHomeBackWrapper:hover {
+  position: relative;
+  width: calc(var(--index) * 9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-conic-gradient(
+    from var(--a),
+    rgb(1, 107, 107) 0%,
+    rgb(0, 51, 66) 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  border-radius: 12px;
+  animation: animate 2s linear infinite;
+}
+.searchCityForm {
+  margin: 1vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+label {
+  font-weight: 900;
+  text-shadow: 1px 1px 1px orangered;
+}
+.searchCityForm input {
+  width: calc(var(--index) * 15);
+  height: calc(var(--index) * 1.5);
+  margin: 0 auto;
+  border-radius: 12px;
+  border: none;
+  box-shadow: inset 3px 3px 3px darkcyan;
+  text-align: center;
+  font-weight: 900;
+  font-size: calc(var(--index) * 0.7);
+  cursor: pointer;
+}
+.btnRouteWrapper {
+  width: calc(var(--index) * 16);
+  margin: 3vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btnRouteWrapper button {
+  width: calc(var(--index) * 7);
+  height: calc(var(--index) * 2);
+  border-radius: 12px;
+  color: rgb(1, 78, 114);
+  font-size: calc(var(--index) * 0.7);
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contactWrapper button:hover {
+  transform: translateY(-1vh);
+  box-shadow: 1px 3px 3px rgb(0, 238, 247);
+}
+.contactWrapper button:active {
+  transform: translateY(-0.3vh);
+  box-shadow: 0px 1px 1px rgb(0, 238, 247), 3px 3px 3px rgb(253, 116, 3);
+}
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+
+.googleMapContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8vw;
+  margin: 4vh auto;
+}
+.routeInfo {
+  margin: 1vh auto;
+  width: calc(var(--index) * 18);
+  height: calc(var(--index) * 3.5);
+  font-size: calc(var(--index) * 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+  border-radius: 12px;
+  box-shadow: inset 1px 1px 16px darkcyan, 2px 2px 12px rgb(2, 255, 255);
+  filter: drop-shadow(2px 2px 15px rgb(2, 255, 255));
+}
+.routeInfo span {
+  color: orangered;
+}
+
+@media screen and (max-width: 900px) {
+  .googleMapContainer {
+    flex-direction: column;
+  }
+  .mapWrapper {
+    width: 90vw;
+  }
+  .recvisiteWrapper {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .routeInfo {
+    height: 15vh;
+  }
+  #destin {
+    margin-top: 3vh;
+  }
+}

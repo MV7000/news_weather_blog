@@ -1,0 +1,103 @@
+.textAboutCity {
+  padding: 1vw;
+  text-align: center;
+  font-size: calc(var(--index) * 0.7);
+  font-weight: 700;
+  text-shadow: 3px 3px 12px darkcyan;
+  color: aqua;
+  filter: drop-shadow(5px 5px 2px rgb(0, 25, 31))
+    drop-shadow(-5px -5px 3px rgb(0, 65, 102)) contrast(150%);
+}
+.sliderWrapper {
+  min-height: 300px;
+  background-color: rgb(0, 30, 31);
+}
+.splide {
+  padding: 0;
+  filter: drop-shadow(3px 12px 5px rgb(0, 58, 58))
+    drop-shadow(5px -12px 5px rgb(0, 58, 58));
+}
+.splide__slide {
+  opacity: 1;
+  transition: 1s;
+  min-width: 750px;
+  overflow: hidden;
+  border: 3px solid darkcyan;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgb(0, 58, 58);
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splide__slide.is-next,
+.splide__slide.is-prev {
+  opacity: 0.3;
+}
+.splide__arrow {
+  border: none;
+}
+
+.weatherWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10vw;
+  padding: 0.5vh;
+  background-color: rgb(1, 57, 59);
+  box-shadow: inset 3px 3px 3px rgb(0, 30, 31);
+  border-radius: 12px;
+  color: orangered;
+}
+h1 {
+  margin: 0 auto;
+  padding: 0;
+}
+h2,
+h3 {
+  font-size: calc(var(--index) * 0.8);
+  text-align: center;
+  color: rgb(0, 247, 255);
+  text-shadow: 3px 3px 12px darkcyan;
+}
+.weatherContainer {
+  margin: 1vh auto;
+}
+.weatherWrapper {
+  max-height: 12vh;
+}
+.additionalWeatherData {
+  font-size: calc(var(--index));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgb(1, 78, 114);
+}
+.stateWeatherWrapper p {
+  font-size: calc(var(--index) * 0.8);
+  font-weight: 900;
+  text-align: center;
+  color: rgb(189, 235, 247);
+  text-shadow: 1px 1px 3px rgb(248, 150, 4);
+}
+.stateWeatherWrapper img {
+  height: calc(var(--index) * 2);
+  width: calc(var(--index) * 2);
+}
+.stateWeatherWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 5px 1px 3px rgb(0, 28, 41);
+}
+
+@media screen and (max-width: 700px) {
+  .textAbout {
+    margin-bottom: 3vh;
+  }
+}
